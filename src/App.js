@@ -24,7 +24,8 @@ const libraries = ["places"];
 const mapContainerStyle = { width: "100vw", height: "100vh" };
 const defaultCenter = { lat: 43.6532, lng: -79.3832 };
 
-const Panel = styled.div`
+//harita üzerine sabit yerleşen yapılar
+const Panel = styled.div` 
   position: absolute;
   background: white;
   padding: 15px;
@@ -33,6 +34,7 @@ const Panel = styled.div`
   z-index: 10;
 `;
 
+//haritanın sol üst köşesinde yer alan başlangıç ve varış adres alanları
 const TopLeftPanel = styled(Panel)`
   top: 10px;
   left: 10px;
@@ -43,29 +45,34 @@ const TopLeftPanel = styled(Panel)`
   gap: 15px;
 `;
 
+//haritanın sağ üst köşesinde yer alan durak ekle alanı
 const TopRightPanel = styled(Panel)`
   top: 10px;
   right: 10px;
   width: 300px;
 `;
 
+//haritanın sağ alt köşesinde yer alan eklenen duraklar alanı
 const BottomRightPanel = styled(Panel)`
   bottom: 10px;
   right: 10px;
   max-width: 300px;
 `;
 
+//ögeleri yan yana dizmek için kullanılır
 const FlexRow = styled.div`
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 `;
 
+//adres giriş alanlarını kapsar
 const FieldWrapper = styled.div`
   flex: 1 1 300px;
   min-width: 280px;
 `;
 
+//inputların üstündeki yazılar için yazı stili
 const Label = styled.label`
   font-weight: bold;
   display: block;
